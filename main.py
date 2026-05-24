@@ -26,7 +26,7 @@ async def on_message(message):
     if message.channel.id == TARGET_CHANNEL_ID:
         try:
             # send to your DMs
-            user = await bot.fetch_user(YOUR_USER_ID)  # replace this
+            user = await bot.fetch_user(590074923284955136)  # replace this
             await user.send(
                 f"📩 {message.author}: {message.content}"
             )
