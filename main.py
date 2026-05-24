@@ -14,4 +14,5 @@ async def on_ready():
 async def hello(ctx):
     await ctx.send("Hello!")
 
-bot.run("YOUR_BOT_TOKEN")
+import os
+bot.run(os.getenv("DISCORD_TOKEN"))
