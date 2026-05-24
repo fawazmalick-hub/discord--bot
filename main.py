@@ -7,26 +7,21 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-🔴 PUT YOUR CHANNEL ID HERE
-TARGET_CHANNEL_ID = 1507273946012323961  # replace this
+TARGET_CHANNEL_ID = 1507273946012323961  
 
-When bot is ready
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
 
-Listen to all messages
+
 @bot.event
 async def on_message(message):
-    # ignore bot itself
     if message.author.bot:
         return
 
-    # only listen to one channel
     if message.channel.id == TARGET_CHANNEL_ID:
         try:
-            # send to your DMs
-            user = await bot.fetch_user(590074923284955136)  # replace this
+            user = await bot.fetch_user(590074923284955136) 
             await user.send(
                 f"📩 {message.author}: {message.content}"
             )
