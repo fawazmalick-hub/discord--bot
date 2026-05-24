@@ -16,8 +16,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.author.bot:
-        return
+    if message.webhook_id is None and message.author .bot :
+           return
 
     if message.channel.id == TARGET_CHANNEL_ID:
         try:
