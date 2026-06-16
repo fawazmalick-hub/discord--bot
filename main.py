@@ -7,7 +7,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-TARGET_CHANNEL_ID = 1507273946012323961  
+TARGET_CHANNEL_ID = 1516279097301532672  
 
 @bot.event
 async def on_ready():
